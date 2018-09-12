@@ -1,11 +1,9 @@
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
-
+import static com.github.tomakehurst.wiremock.client.WireMock.*;
+import static io.restassured.RestAssured.given;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-
-import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static io.restassured.RestAssured.given;
 
 public class WireMockTest2 {
 

@@ -1,12 +1,11 @@
 import io.specto.hoverfly.junit.rule.HoverflyRule;
-import org.junit.ClassRule;
-import org.junit.Test;
-
 import static io.restassured.RestAssured.given;
 import static io.specto.hoverfly.junit.core.SimulationSource.dsl;
 import static io.specto.hoverfly.junit.dsl.HoverflyDsl.service;
 import static io.specto.hoverfly.junit.dsl.ResponseCreators.success;
 import static org.hamcrest.core.IsEqual.equalTo;
+import org.junit.ClassRule;
+import org.junit.Test;
 
 public class HoverFlyTest
 {
@@ -29,6 +28,5 @@ public class HoverFlyTest
             and().
                 body("data", equalTo("important"));
     }
-
 
 }
