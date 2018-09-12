@@ -15,7 +15,7 @@ public class WireMockTest2 {
     @Before
     public void setupStub() {
 
-        stubFor(post(urlEqualTo("/my/endpoint"))
+        stubFor(post(urlMatching("/my/([a-z]*)"))
                 .withRequestBody(matchingJsonPath("$[?(@.data == 'important')]"))
                 .willReturn(aResponse()
                         .withHeader("Content-Type", "text/json")
